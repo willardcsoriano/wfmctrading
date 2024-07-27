@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spare Parts - WFMC Trading</title>
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .spare-parts-banner {
+            background: url(images/spare-parts/spare-parts-cover-photo.png) no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .spare-parts-banner h1 {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">WFMC Trading</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="rentals.html">Rentals</a></li>
+                <li class="nav-item"><a class="nav-link" href="spare-parts.html">Spare Parts</a></li>
+                <li class="nav-item"><a class="nav-link" href="supplies.html">Supplies</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Spare Parts Banner -->
+    <div class="spare-parts-banner">
+        <h1>Spare Parts</h1>
+    </div>
+
+    <!-- Spare Parts Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sidebar for Categories -->
+            <div class="col-md-3">
+                <h4>Categories</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#" data-category="engine-parts">Engine Parts</a></li>
+                    <li class="list-group-item"><a href="#" data-category="blades">Blades</a></li>
+                    <li class="list-group-item"><a href="#" data-category="belts">Belts</a></li>
+                    <li class="list-group-item"><a href="#" data-category="filters">Filters</a></li>
+                    <li class="list-group-item"><a href="#" data-category="electrical-components">Electrical Components</a></li>
+                </ul>
+            </div>
+            <!-- Spare Parts Listings -->
+            <div class="col-md-9">
+                <ul class="list-group" id="spare-parts-list">
+                    <!-- Spare parts will be dynamically inserted here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">WFMC Trading</h5>
+                    <p>Your trusted source for refurbished golf maintenance equipment and supplies.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about.html" class="text-dark">About Us</a></li>
+                        <li><a href="products.html" class="text-dark">Products</a></li>
+                        <li><a href="rentals.html" class="text-dark">Rentals</a></li>
+                        <li><a href="supplies.html" class="text-dark">Supplies</a></li>
+                        <li><a href="contact.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <p>15 Downroad, Villa Grande Subdivision<br>Barangay Cupang, Antipolo City<br>(639)17-547-5654<br>vincesor@yahoo.com</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#" class="text-dark"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#" class="text-dark"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-light">
+            &copy; 2024 WFMC Trading. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const spareParts = {
+            "engine-parts": [
+                { title: "Oil Seal", description: "High-quality oil seal to prevent leaks and ensure smooth operation." },
+                { title: "Engine Bearing", description: "Durable engine bearing for smooth and efficient engine function." },
+                { title: "Gasket Set", description: "Complete gasket set for maintaining engine integrity and performance." },
+                { title: "Timing Belt", description: "Reliable timing belt for precise engine timing." },
+                { title: "Piston Ring Set", description: "Set of piston rings for optimal engine compression and performance." }
+            ],
+            "blades": [
+                { title: "21-inch Mower Blade", description: "Durable and sharp blade for 21-inch mowers." },
+                { title: "Recycler Blade", description: "High-performance blade designed for efficient recycling." },
+                { title: "22-inch Mower Blade", description: "Precision-cut blade for 22-inch mowers." },
+                { title: "Mulching Blade", description: "Efficient mulching blade for enhanced lawn care." },
+                { title: "24-inch Mower Blade", description: "Heavy-duty blade for 24-inch mowers." }
+            ],
+            "belts": [
+                { title: "Drive Belt", description: "Replacement drive belt for consistent performance." },
+                { title: "Deck Belt", description: "Durable deck belt for riding mowers." },
+                { title: "Transmission Belt", description: "High-quality transmission belt for tractors." },
+                { title: "V-Belt", description: "Standard V-belt for various equipment." },
+                { title: "Traction Belt", description: "Reliable traction belt for smooth operation." }
+            ],
+            "filters": [
+                { title: "Fuel Filter", description: "Efficient fuel filter for machinery." },
+                { title: "Oil Filter", description: "Premium oil filter for engines and equipment." },
+                { title: "Air Filter", description: "High-performance air filter for engines." },
+                { title: "Pre-Filter", description: "Protective pre-filter for mowers." },
+                { title: "Engine Oil Filter", description: "Reliable oil filter for small engines." }
+            ],
+            "electrical-components": [
+                { title: "Starter Motor", description: "Replacement starter motor for tractors." },
+                { title: "Ignition Coil", description: "High-quality ignition coil for equipment." },
+                { title: "Voltage Regulator", description: "Reliable voltage regulator for engines." },
+                { title: "Alternator", description: "Durable alternator for lawn and garden equipment." },
+                { title: "Starter Solenoid", description: "Standard starter solenoid for engines." }
+            ]
+        }; 
+
+        function renderSpareParts(category) {
+            const sparePartsList = document.getElementById('spare-parts-list');
+            sparePartsList.innerHTML = ''; // Clear the existing spare parts
+            const selectedParts = spareParts[category] || [];
+            selectedParts.forEach(part => {
+                const partItem = `
+                    <li class="list-group-item">
+                        <h5>${part.title}</h5>
+                        <p>${part.description}</p>
+                    </li>
+                `;
+                sparePartsList.innerHTML += partItem;
+            });
+        }
+
+        // Event listener for category links
+        document.querySelectorAll('[data-category]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.getAttribute('data-category');
+                renderSpareParts(category);
+            });
+        });
+
+        // Initially render spare parts for the first category
+        renderSpareParts('engine-parts');
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplies - WFMC Trading</title>
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .supplies-banner {
+            background: url(images/supplies/supplies-cover-photo.png) no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .supplies-banner h1 {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">WFMC Trading</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="rentals.html">Rentals</a></li>
+                <li class="nav-item"><a class="nav-link" href="spare-parts.html">Spare Parts</a></li>
+                <li class="nav-item"><a class="nav-link" href="supplies.html">Supplies</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Supplies Banner -->
+    <div class="supplies-banner">
+        <h1>Supplies & Consumables</h1>
+    </div>
+
+    <!-- Supplies Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sidebar for Categories -->
+            <div class="col-md-3">
+                <h4>Categories</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#" data-category="fertilizers">Fertilizers</a></li>
+                    <li class="list-group-item"><a href="#" data-category="herbicides">Herbicides</a></li>
+                    <li class="list-group-item"><a href="#" data-category="pesticides">Pesticides</a></li>
+                    <li class="list-group-item"><a href="#" data-category="seeds">Seeds</a></li>
+                </ul>
+            </div>
+            <!-- Supplies Listings -->
+            <div class="col-md-9">
+                <ul class="list-group" id="supplies-list">
+                    <!-- Supplies will be dynamically inserted here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">WFMC Trading</h5>
+                    <p>Your trusted source for refurbished golf maintenance equipment and supplies.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about.html" class="text-dark">About Us</a></li>
+                        <li><a href="products.html" class="text-dark">Products</a></li>
+                        <li><a href="rentals.html" class="text-dark">Rentals</a></li>
+                        <li><a href="supplies.html" class="text-dark">Supplies</a></li>
+                        <li><a href="contact.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <p>15 Downroad, Villa Grande Subdivision<br>Barangay Cupang, Antipolo City<br>(639)17-547-5654<br>vincesor@yahoo.com</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#" class="text-dark"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#" class="text-dark"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-light">
+            &copy; 2024 WFMC Trading. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const supplies = {
+            "fertilizers": [
+                { title: "Scotts Turf Builder Lawn Food", description: "All-in-one fertilizer for a thicker, greener lawn." },
+                { title: "Miracle-Gro Water Soluble All Purpose Plant Food", description: "Fast-acting fertilizer for all types of plants." },
+                { title: "Osmocote Smart-Release Plant Food", description: "Long-lasting plant food for up to 6 months." },
+                { title: "Espoma Organic Lawn Food", description: "Organic, slow-release fertilizer for healthy grass." },
+                { title: "Jobe’s Organics All-Purpose Fertilizer", description: "Organic fertilizer for vegetables, flowers, and shrubs." }
+            ],
+            "herbicides": [
+                { title: "Roundup Weed & Grass Killer", description: "Effective herbicide for eliminating weeds and grass." },
+                { title: "Ortho Weed B Gon Weed Killer", description: "Selective herbicide that kills weeds without harming lawns." },
+                { title: "Spectracide Weed Stop for Lawns", description: "Prevents and controls over 200 types of weeds." },
+                { title: "Southern Ag Crossbow Specialty Herbicide", description: "Controls brush and broadleaf weeds in pastures." },
+                { title: "Preen Garden Weed Preventer", description: "Prevents weeds in flower and vegetable gardens." }
+            ],
+            "pesticides": [
+                { title: "Sevin Insect Killer", description: "Broad-spectrum pesticide for gardens and lawns." },
+                { title: "Bayer Advanced Complete Insect Killer", description: "Kills insects above and below the ground." },
+                { title: "Ortho Home Defense Insect Killer", description: "Indoor and outdoor insect killer for long-lasting control." },
+                { title: "Safer Brand Insect Killing Soap", description: "Organic insecticide for use on vegetables, fruits, and flowers." },
+                { title: "Bonide Neem Oil Insect & Disease Control", description: "Multi-purpose neem oil for insect control and disease prevention." }
+            ],
+            "seeds": [
+                { title: "Pennington Smart Seed Sun & Shade", description: "Grass seed blend for areas with both sun and shade." },
+                { title: "Scotts Turf Builder Grass Seed", description: "High-performance grass seed for a thick, green lawn." },
+                { title: "Burpee Organic Vegetable Seeds", description: "Organic seeds for a variety of vegetables." },
+                { title: "Wildflower Seed Mix", description: "A mix of wildflower seeds for a colorful garden." },
+                { title: "Jonathan Green Black Beauty Ultra Grass Seed", description: "Premium grass seed for deep roots and drought resistance." }
+            ]
+        };
+
+
+        function renderSupplies(category) {
+            const suppliesList = document.getElementById('supplies-list');
+            suppliesList.innerHTML = ''; // Clear the existing supplies
+            const selectedSupplies = supplies[category] || [];
+            selectedSupplies.forEach(supply => {
+                const supplyItem = `
+                    <li class="list-group-item">
+                        <h5>${supply.title}</h5>
+                        <p>${supply.description}</p>
+                    </li>
+                `;
+                suppliesList.innerHTML += supplyItem;
+            });
+        }
+
+        // Event listener for category links
+        document.querySelectorAll('[data-category]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.getAttribute('data-category');
+                renderSupplies(category);
+            });
+        });
+
+        // Initially render supplies for the first category
+        renderSupplies('fertilizers');
+    </script>
+</body>
+</html>

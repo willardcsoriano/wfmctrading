@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - WFMC Trading</title>
+    <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .products-banner {
+            background: url(images/product/cover.png) no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .products-banner h1 {
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">WFMC Trading</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="rentals.html">Rentals</a></li>
+                <li class="nav-item"><a class="nav-link" href="spare-parts.html">Spare Parts</a></li>
+                <li class="nav-item"><a class="nav-link" href="supplies.html">Supplies</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Products Banner -->
+    <div class="products-banner">
+        <h1>Our Products</h1>
+    </div>
+
+    <!-- Products Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Sidebar for Categories -->
+            <div class="col-md-3">
+                <h4>Categories</h4>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#" data-category="greens-mowers">Greens Mowers</a></li>
+                    <li class="list-group-item"><a href="#" data-category="fairway-mowers">Fairway Mowers</a></li>
+                    <li class="list-group-item"><a href="#" data-category="rough-mowers">Rough Mowers</a></li>
+                    <li class="list-group-item"><a href="#" data-category="aerators">Aerators</a></li>
+                    <li class="list-group-item"><a href="#" data-category="sprayers">Sprayers</a></li>
+                    <li class="list-group-item"><a href="#" data-category="other-equipment">Other Equipment</a></li>
+                </ul>
+            </div>
+            <!-- Product Listings -->
+            <div class="col-md-9">
+                <ul class="list-group" id="product-list">
+                    <!-- Products will be dynamically inserted here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">WFMC Trading</h5>
+                    <p>Your trusted source for refurbished golf maintenance equipment and supplies.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="index.html" class="text-dark">Home</a></li>
+                        <li><a href="about.html" class="text-dark">About Us</a></li>
+                        <li><a href="products.html" class="text-dark">Products</a></li>
+                        <li><a href="rentals.html" class="text-dark">Rentals</a></li>
+                        <li><a href="supplies.html" class="text-dark">Supplies</a></li>
+                        <li><a href="contact.html" class="text-dark">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <p>15 Downroad, Villa Grande Subdivision<br>Barangay Cupang, Antipolo City<br>(639)17-547-5654<br>vincesor@yahoo.com</p>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#" class="text-dark"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#" class="text-dark"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 bg-dark text-light">
+            &copy; 2024 WFMC Trading. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const products = {
+            "greens-mowers": [
+                { title: "John Deere 180B Greens Mower", description: "Classic and reliable greens mower with precision cutting for optimal turf maintenance." },
+                { title: "Toro Greensmaster 1000", description: "Highly accurate and durable greens mower, ideal for maintaining smooth and even greens." },
+                { title: "Jacobsen PGM 22", description: "Manual reel mower known for its superior cut quality and ease of use on greens." },
+                { title: "Baroness LM56 Greens Mower", description: "Greens mower with exceptional cutting performance and ease of operation." },
+                { title: "Sisis Rotorake 600HD", description: "Heavy-duty scarifier designed for effective greens maintenance and thatch control." }
+            ],
+            "fairway-mowers": [
+                { title: "John Deere 3235C Fairway Mower", description: "Reliable fairway mower with powerful engine for consistent performance on large areas." },
+                { title: "Toro Reelmaster 3100-D", description: "Durable fairway mower with precision engineering for smooth and efficient mowing." },
+                { title: "Jacobsen LF-1880 Fairway Mower", description: "Versatile and efficient fairway mower for precise turf cutting on fairways." },
+                { title: "Kubota GF1800 Fairway Mower", description: "Powerful and easy-to-operate fairway mower with robust construction for heavy use." },
+                { title: "Baroness LM2700 Fairway Mower", description: "Precision mowing for fairways with advanced cutting technology and user-friendly controls." }
+            ],
+            "rough-mowers": [
+                { title: "John Deere 2653A Professional Utility Mower", description: "Rough mower designed for challenging terrains with superior traction and stability." },
+                { title: "Toro Groundsmaster 3280-D", description: "Heavy-duty rough mower with robust construction and exceptional cutting capability." },
+                { title: "Jacobsen AR522 Rough Mower", description: "Versatile rough mower for various terrains with a smooth and consistent cut." },
+                { title: "Kubota F3680 Rough Mower", description: "High-performance rough mower with superior maneuverability and cutting efficiency." },
+                { title: "Baroness GM2810 Rough Mower", description: "Efficient and robust rough mower with a powerful engine and excellent cutting performance." }
+            ],
+            "aerators": [
+                { title: "John Deere AerCore 800 Aerator", description: "High-performance aerator with adjustable depth and spacing for superior turf aeration." },
+                { title: "Toro ProCore SR72", description: "Efficient lawn aerator with robust construction for consistent and effective aeration." },
+                { title: "Jacobsen AerKing 1548 Aerator", description: "Advanced aerator providing deep and uniform aeration for optimal turf health." },
+                { title: "Sisis Auto-Rotorake MK5", description: "Effective thatch control and aeration with a user-friendly design and reliable performance." },
+                { title: "Wiedenmann Terra Spike G160", description: "Deep aeration for sports fields and golf courses with fast and efficient operation." }
+            ],
+            "sprayers": [
+                { title: "John Deere HD200 SelectSpray", description: "Precision sprayer with a range of nozzle options for accurate chemical application." },
+                { title: "Toro Multi Pro 5700-D", description: "High-capacity sprayer with innovative features for efficient and effective spraying." },
+                { title: "Jacobsen SprayTek DS300", description: "Advanced sprayer designed for precise chemical application with superior coverage." },
+                { title: "Hardi Ranger Sprayer", description: "Durable and efficient sprayer for large areas with a robust construction and easy operation." },
+                { title: "Smith Performance Sprayers NL400", description: "Professional-grade sprayer for landscape maintenance with high precision and reliability." }
+            ],
+            "other-equipment": [
+                { title: "John Deere ProGator 2030A", description: "Versatile utility vehicle with exceptional hauling capacity and all-terrain capability." },
+                { title: "Toro Workman 3200", description: "Multi-purpose utility vehicle designed for heavy-duty tasks with superior comfort and performance." },
+                { title: "Kubota RTV900 Utility Vehicle", description: "Reliable and rugged utility vehicle with powerful performance and advanced features." },
+                { title: "Club Car Carryall 272", description: "Efficient and versatile utility vehicle ideal for a variety of tasks with excellent maneuverability." },
+                { title: "Yamaha UMAX Rally Utility Vehicle", description: "Compact and durable utility vehicle designed for various tasks with ease of use and reliability." }
+            ]
+        };
+
+        function renderProducts(category) {
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = ''; // Clear the existing products
+            const selectedProducts = products[category] || [];
+            selectedProducts.forEach(product => {
+                const productItem = `
+                    <li class="list-group-item">
+                        <h5>${product.title}</h5>
+                        <p>${product.description}</p>
+                    </li>
+                `;
+                productList.innerHTML += productItem;
+            });
+        }
+
+        // Event listener for category links
+        document.querySelectorAll('[data-category]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const category = this.getAttribute('data-category');
+                renderProducts(category);
+            });
+        });
+
+        // Initially render products for the first category
+        renderProducts('greens-mowers');
+
+    </script>
+</body>
+</html>
